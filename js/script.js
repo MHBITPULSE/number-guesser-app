@@ -8,14 +8,24 @@ for (let index = 0; index < 4; index++) {
         alert("You lose! ");
         break;
     }
-    let guess = prompt("Guess a number between 1 to 10");
+    let guess = prompt(`Guess a number between 1 to 10. You have ${3 - index} chances left!`);
     if (guess == correcr_ans) {
         alert("You Win");
         break;
     }
     else if (guess > correcr_ans) {
+        if (index == 2) {
+            alert("You lose! ");
+            break;
+        }
         alert("Correct answer is smaller!");
     }
-    else alert("Correct answer is greater!");
+    else {
+        if (index == 2) {
+            alert("You lose! ");
+            break;
+        }
+        alert("Correct answer is greater!")
+    };
 }
 
