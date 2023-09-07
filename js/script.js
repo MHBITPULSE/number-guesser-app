@@ -1,14 +1,13 @@
 let playButton = document.getElementById("playButton")
-console.log(playButton)
 
 playButton.addEventListener("click", startPlay);
 
 let low = 1;
 let high = 10;
 
-const correcr_ans = Math.floor(Math.random() * 10);
 
 function startPlay() {
+    var correcr_ans = Math.floor(Math.random() * 10);
     for (let index = 0; index < 4; index++) {
         if (index == 3) {
             alert("You lose! ");
